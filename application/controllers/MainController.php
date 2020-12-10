@@ -235,8 +235,8 @@ class MainController extends CI_Controller {
 		$encrypted_random=str_replace("/", "~",openssl_encrypt($random,"AES-128-ECB",$key));
 
 	    $message = "<h4>As requested,here is a link to allow you to select a new SIF4WPS password:</h4>";
-		// $message.="<p>https://sif4wps.com/Reset-Password/".$encrypted_string."/".$encrypted_random."</p>";
-		$message.="<p>http://localhost/WPS/Reset-Password/".$encrypted_string."/".$encrypted_random."</p>";
+		$message.="<p>https://sif4wps.com/Reset-Password/".$encrypted_string."/".$encrypted_random."</p>";
+		// $message.="<p>http://localhost/WPS/Reset-Password/".$encrypted_string."/".$encrypted_random."</p>";
 		$message.="<h5>This link will expaire in 15 minutes.</h5>";
 		// echo $message;
    		$this->load->library('email');

@@ -29,7 +29,7 @@
 <body>
 	<div class="wrapper animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="1000" data-animsition-out-class="fade-out" data-animsition-out-duration="1000">
 		<div class="main" id="main">
-			<div class="hero-section app-hero" style="padding-bottom: 0px;">
+			<div class="hero-section app-hero" style="padding-bottom: 0px;height: 100vh;">
 				<div class="container">
 					<div class="hero-content app-hero-content text-center" style="padding-top: 10px">
 						<div class="row justify-content-md-center">

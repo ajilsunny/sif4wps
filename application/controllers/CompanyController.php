@@ -281,7 +281,7 @@ class CompanyController extends MainController {
 				'updated_at'=>$timestamp
 			];
 			$condition=['employee_id'=>$employe,'year'=>$year,'month'=>$month];
-			$salary_section_check=$this->MainModel->check_data('tbl_salary_entry',$data);
+			$salary_section_check=$this->MainModel->check_data('tbl_salary_entry',$condition);
 			if($salary_section_check==0)
 			{
 				$data['created_at']=$timestamp;
@@ -475,11 +475,9 @@ class CompanyController extends MainController {
             $sheet->setCellValue('F' . $rows, $variable_salary);
             $sheet->setCellValue('G' . $rows, $no_of_leaves);
             $rows++;
-            $i++;
         } 
         $writer = new Xlsx($spreadsheet);
 		$writer->save("assets/salary_excel/".$fileName);
-		header("Content-Type: application/vnd.ms-excel");
         redirect(base_url()."/assets/salary_excel/".$fileName);              
 
 	}
@@ -532,7 +530,7 @@ class CompanyController extends MainController {
 				'updated_at'=>$timestamp
 			];
 			$condition=['employee_id'=>$emp_id,'year'=>$year,'month'=>$month];
-			$salary_section_check=$this->MainModel->check_data('tbl_salary_entry',$data);
+			$salary_section_check=$this->MainModel->check_data('tbl_salary_entry',$condition);
 			if($salary_section_check==0)
 			{
 				$data['created_at']=$timestamp;
